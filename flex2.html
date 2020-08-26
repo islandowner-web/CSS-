@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    .main-content-box {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #abcdef;
+      border: 1px solid #ccc;
+      height: 90vh;
+      display: flex;
+    }
+    .left-box {
+      height: 100%;
+      background: pink;
+      flex: 1;
+    }
+    .left-box .sm-list {
+      width: 100%;
+      min-height: 100px;
+      line-height: 20px;
+      background: green;
+    }
+    .right-box {
+      height: 100%;
+      background: orange;
+      flex: none;
+      width: 300px;
+      margin-left: 10px;
+    }
+    @media (max-width:900px) {
+      .right-box {
+        display: none;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <div class="main-content-box">
+    <div class="left-box">
+      <div class="sm-list">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse animi facere provident dolorum cum officiis accusamus, velit soluta quisquam suscipit laudantium voluptas quia ducimus aperiam autem culpa maxime! Molestias, laborum!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse animi facere provident dolorum cum officiis accusamus, velit soluta quisquam suscipit laudantium voluptas quia ducimus aperiam autem culpa maxime! Molestias, laborum!</p>
+      </div>
+    </div>
+    <div class="right-box"></div>
+  </div>
+</body>
+</html>
