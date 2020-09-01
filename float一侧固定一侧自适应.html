@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>    
+<html lang="en">    
+<head>    
+    <meta charset="UTF-8">    
+    <title>css实现右侧固定宽度，左侧宽度自适应（最终方案）</title>  
+    <style type="text/css">  
+        .wrap {  
+            max-width: 90%;  
+            margin:0 auto;  
+            overflow: hidden;  /*清除浮动，以及隐藏向左移动出去的部分*/
+        }  
+     
+        .content {  
+            float: left;  
+            width: 100%;  
+            margin-left: -310px;  
+            background-color: #eee;  
+        }  
+        .content-inner {  
+            margin-left: 310px;  
+            border: 1px solid green; 
+        }          
+        .sidebar {  
+            float: right;  
+            width: 300px;  
+            height: 500px;
+            background-color: gold;  
+        }  
+        .footer{margin:0 auto;max-width: 900px;height: 100px; background:green;}
+    </style>  
+</head>    
+<body>     
+    <div class="wrap">  
+        <div class="content">  
+            <div class="content-inner">自适应区,浏览器宽度缩小时文字会自动换行。</div>  
+        </div>  
+        <div class="sidebar">固定宽度区(float与margin齐上阵)</div>  
+    </div>       
+    <div class="footer">底部</div>   
+</body>    
